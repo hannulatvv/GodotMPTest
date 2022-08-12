@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Entities/Player.tscn" type="PackedScene" id=1]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=2]
+
+[node name="Node" type="Node"]
+
+[node name="CSGMesh" type="CSGMesh" parent="."]
+transform = Transform( 15.4916, 0, 0, 0, 0.0455831, 0, 0, 0, 9.54848, 0, 0, 0 )
+mesh = SubResource( 1 )
+material = SubResource( 2 )
+
+[node name="CSGMesh2" type="CSGMesh" parent="."]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.69311, 0.632529, -1.56975 )
+mesh = SubResource( 1 )
+material = SubResource( 2 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.823283, -0.0105065, 0.567533, -0.289104, 0.85267, 0.43517, -0.488491, -0.522345, 0.698951, 0, 2.82807, 0 )
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.761773, 0, 2.30067 )
